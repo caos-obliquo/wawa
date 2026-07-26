@@ -428,7 +428,7 @@ main(int argc, char *argv[])
 	if (!compositor || !layer_shell || !shm)
 		die("bad compositor available");
 
-	while (wl_display_dispatch(display))
+	while (wl_display_dispatch(display) != -1)
 		;
 
 	return EXIT_SUCCESS;
