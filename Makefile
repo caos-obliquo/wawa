@@ -13,7 +13,7 @@ LIBS != $(PKG_CONFIG) --libs $(PKGS)
 
 CPPFLAGS = -D_GNU_SOURCE -DVERSION=\"$(VERSION)\"
 CFLAGS   = -pedantic -Wall $(CPPFLAGS) $(INCS)
-LDLIBS   = $(LIBS)
+LDLIBS   = $(LIBS) -lm
 
 all: wawa
 
